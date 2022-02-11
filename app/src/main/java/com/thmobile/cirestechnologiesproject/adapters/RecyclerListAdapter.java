@@ -21,6 +21,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
     static class RecyclerHolder extends RecyclerView.ViewHolder {
 
+        //init Views of Lists
         ImageView imageViewItemList;
         TextView textViewItemList;
         TextView textViewDate;
@@ -43,6 +44,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
+        //Put values to Views
         DataModel singleModel = dataModels.get(position);
         Picasso.get().load(singleModel.getImageUrl()).into(holder.imageViewItemList);
         holder.textViewItemList.setText(singleModel.getTitle());

@@ -2,6 +2,7 @@ package com.thmobile.cirestechnologiesproject.utils;
 
 public class DataModel {
 
+    //Models
     private String author;
     private String content;
     private String date;

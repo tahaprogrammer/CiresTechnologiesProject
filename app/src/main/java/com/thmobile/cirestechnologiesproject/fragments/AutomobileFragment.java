@@ -29,12 +29,15 @@ public class AutomobileFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_automobile, container, false);
 
+        //initialize the recyclerview
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewAutomobile);
         RecyclerListAdapter listAdapter = new RecyclerListAdapter();
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(listAdapter);
 
+        //Check if the user already downloaded the data from server
+        //if the data already downloaded call it from the static variable
         if (Utils.dataModels_Automobile.isEmpty()) {
             DataRequestServer dataRequestServer = new DataRequestServer(getActivity());
             dataRequestServer.getAllOnlineData(Utils.BASE_URL_Automobile, new OnDownloadFinished() {

@@ -29,6 +29,7 @@ public class DataRequestServer {
         requestQueue = Volley.newRequestQueue(context);
     }
 
+    //this method get all data from server using volley library
     public void getAllOnlineData(String BASE_URL, OnDownloadFinished onDownloadFinished) {
         ArrayList<DataModel> dataModels = new ArrayList<>();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, BASE_URL, null,

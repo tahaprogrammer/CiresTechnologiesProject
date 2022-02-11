@@ -15,6 +15,7 @@ import com.thmobile.cirestechnologiesproject.utils.Utils;
 
 public class MainActivity extends AppCompatActivity {
 
+    //EditTexts Input
     private EditText editTextUsername, editTextPassword;
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 //Check if EditTexts is Empties
                 if (editTextUsername.getText().toString().trim().length() > 0 && editTextPassword.getText().toString().trim().length() > 0) {
 
+                    //Save data in variables
                     String username = editTextUsername.getText().toString().trim();
                     String password = editTextPassword.getText().toString().trim();
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                         //Access Successfully
                         launchActivity();
                     } else {
-                        showDialogMessage("Error!","This data is not Available into our databases!");
+                        showDialogMessage("Error!", "This data is not Available into our databases!");
                     }
 
                 }
@@ -49,15 +51,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchActivity() {
+        //start new activity
         startActivity(new Intent(this, NewsActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         finish();
     }
 
     private void init() {
+        //init Views
         editTextUsername = findViewById(R.id.editTextUserName);
         editTextPassword = findViewById(R.id.editTextPassword);
     }
 
+    //dialog of errors
     private void showDialogMessage(String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this)
                 .setTitle(title)

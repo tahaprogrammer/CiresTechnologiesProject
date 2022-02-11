@@ -34,6 +34,8 @@ public class BusinessFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(listAdapter);
 
+        //Check if the user already downloaded the data from server
+        //if the data already downloaded call it from the static variable
         if (Utils.dataModels_Business.isEmpty()) {
             DataRequestServer dataRequestServer = new DataRequestServer(getActivity());
             dataRequestServer.getAllOnlineData(Utils.BASE_URL_Business, new OnDownloadFinished() {

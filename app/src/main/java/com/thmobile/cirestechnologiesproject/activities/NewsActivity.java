@@ -29,6 +29,7 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
+        //Setup DrawerLayout and ToggleButton
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -37,12 +38,11 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //Setup ViewPager and Tabs
         ViewPager2 viewPager2 = findViewById(R.id.viewPager);
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(),getLifecycle());
         viewPager2.setAdapter(fragmentAdapter);
-
-
         new TabLayoutMediator(tabLayout, viewPager2,
                 new TabLayoutMediator.TabConfigurationStrategy() {
                     @Override public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
@@ -59,6 +59,7 @@ public class NewsActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+    //Click Listener of menu in NavigationView
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {

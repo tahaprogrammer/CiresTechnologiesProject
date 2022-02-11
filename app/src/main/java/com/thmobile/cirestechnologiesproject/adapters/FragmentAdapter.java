@@ -21,6 +21,8 @@ public class FragmentAdapter extends FragmentStateAdapter {
         super(fragmentManager, lifecycle);
     }
 
+
+    //Add All Fragments
     @NonNull
     @Override
     public Fragment createFragment(int position) {
@@ -42,8 +44,6 @@ public class FragmentAdapter extends FragmentStateAdapter {
                 return new ScienceFragment();
         }
     }
-
-
 
     @Override
     public int getItemCount() {
