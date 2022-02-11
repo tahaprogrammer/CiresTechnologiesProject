@@ -1,12 +1,13 @@
-package com.thmobile.cirestechnologiesproject;
+package com.thmobile.cirestechnologiesproject.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.thmobile.cirestechnologiesproject.R;
+import com.thmobile.cirestechnologiesproject.utils.Utils;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,14 +16,14 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        //startActivity(new Intent(this , MainActivity.class));
+        startActivity(new Intent(this , NewsActivity.class));
 
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+        /*new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
                 launchActivity();
             }
-        }, 3000);
+        }, 3000);*/
     }
 
     private void launchActivity() {

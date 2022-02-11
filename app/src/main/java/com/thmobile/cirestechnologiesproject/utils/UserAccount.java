@@ -1,4 +1,4 @@
-package com.thmobile.cirestechnologiesproject;
+package com.thmobile.cirestechnologiesproject.utils;
 
 public class UserAccount {
 

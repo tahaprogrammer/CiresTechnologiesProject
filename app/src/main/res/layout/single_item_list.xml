@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:id="@+id/imageViewItemList"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewItemList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@+id/cardViewImage"
+            android:fontFamily="@font/font"
+            android:text="A New Corona Virus Called Covid22"
+            android:textColor="@android:color/black" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewItemList"
+            android:layout_margin="20dp"
+            android:layout_toEndOf="@id/cardViewImage"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_margin="4dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/time_icon" />
+
+            <TextView
+                android:layout_margin="4dp"
+                android:id="@+id/textViewItemListDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 PM"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

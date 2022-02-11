@@ -1,11 +1,13 @@
-package com.thmobile.cirestechnologiesproject;
+package com.thmobile.cirestechnologiesproject.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.thmobile.cirestechnologiesproject.R;
+import com.thmobile.cirestechnologiesproject.utils.Utils;
 
 public class FirstUsageActivity extends AppCompatActivity {
 

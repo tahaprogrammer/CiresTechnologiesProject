@@ -1,4 +1,4 @@
-package com.thmobile.cirestechnologiesproject;
+package com.thmobile.cirestechnologiesproject.activities;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -9,6 +9,9 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.thmobile.cirestechnologiesproject.R;
+import com.thmobile.cirestechnologiesproject.utils.Utils;
 
 public class MainActivity extends AppCompatActivity {
 
